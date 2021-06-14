@@ -1,0 +1,24 @@
+# Version: 7.14.0.1 (d16-10: fe0e2c518)
+/Library/Frameworks/Xamarin.Mac.framework/Versions/7.14.0.1/lib/mmp/mmp.exe \
+	/Library/Frameworks/Xamarin.Mac.framework/Versions/7.14.0.1/bin/../lib/mmp/mmp.exe \
+	--debug \
+	'/target-framework:Xamarin.Mac,Version=v2.0,Profile=Mobile' \
+	--http-message-handler=HttpClientHandler \
+	'\"--cache=/Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator/obj/x86/Debug/mmp-cache\"' \
+	'\"--root-assembly=/Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator/bin/Debug/InsultGenerator.exe\"' \
+	--sdkroot=/Applications/Xcode.app/Contents/Developer \
+	--targetver=11.0 \
+	-q \
+	-q \
+	-q \
+	-q \
+	'\"/output:/Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator/bin/Debug/\"' \
+	/name:InsultGenerator \
+	/abi:x86_64 \
+	/nolink \
+	/reference:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/Xamarin.Mac/mscorlib.dll \
+	/reference:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/Xamarin.Mac/System.Core.dll \
+	/reference:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/Xamarin.Mac/System.dll \
+	/reference:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/Xamarin.Mac/Facades/System.Drawing.Common.dll \
+	/reference:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/Xamarin.Mac/Xamarin.Mac.dll \
+	'@/Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator/obj/x86/Debug/response-file.rsp' \
