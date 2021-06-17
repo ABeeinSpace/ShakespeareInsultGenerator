@@ -28,14 +28,14 @@ namespace InsultGenerator_Win
         private string InsultGeneratorInator(Random rng) {
 			
             // ReSharper disable once StringLiteralTypo
-            string[] firstHalfOfInsultArray = new string[] {"warped", "rougish", "fobbing", "babbling"};
-            string[] middleOfInsultArray = new string[] {"swag-bellied", "sheep-biting", "puke-stockinged", "hag-born"};
+            string[] firstHalfOfInsultArray = new string[] {"warped", "rougish", "fobbing", "babbling", "surly", };
+            string[] middleOfInsultArray = new string[] {"swag-bellied", "sheep-biting", "puke-stockinged", "hag-born", "soulless", "dread-bolted"};
             // ReSharper disable once StringLiteralTypo
-            string[] finalBitOfInsultArray = new string[] {"ruinous-butt!", "tyrant!", "misbegotten-divel!", "coward!"};
+            string[] finalBitOfInsultArray = new string[] {"ruinous-butt!", "tyrant!", "misbegotten-divel!", "coward!", "miscreant!", "vassal!"};
 
-            string beginningOfInsult = (string)firstHalfOfInsultArray.GetValue(rng.Next(4));
-            string middleOfInsult = (string)middleOfInsultArray.GetValue(rng.Next(4));
-            string endOfInsult = (string)finalBitOfInsultArray.GetValue(rng.Next(4));
+            string beginningOfInsult = (string)firstHalfOfInsultArray.GetValue(rng.Next(firstHalfOfInsultArray.Length));
+            string middleOfInsult = (string)middleOfInsultArray.GetValue(rng.Next(middleOfInsultArray.Length));
+            string endOfInsult = (string)finalBitOfInsultArray.GetValue(rng.Next(finalBitOfInsultArray.Length));
 
             var insult = $"Thou {beginningOfInsult} {middleOfInsult} {endOfInsult}";
             generatedInsults.Add(insult);

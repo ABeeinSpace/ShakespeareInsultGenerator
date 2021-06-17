@@ -7,90 +7,90 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24513F700000000000000000 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB3B5000000000000000000 /* Cocoa.framework */; };
-		3DB515D00000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5DC4A00000000000000000 /* Foundation.framework */; };
-		64BE9B000000000000000000 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38AB37B00000000000000000 /* Info.plist */; };
-		3E04F5A00000000000000000 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E2CA3200000000000000000 /* Entitlements.plist */; };
-		1F91BC200000000000000000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C1F9D400000000000000000 /* Main.storyboard */; };
-		3D1C87A00000000000000000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2600C4B00000000000000000 /* Assets.xcassets */; };
-		1606EAA00000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E3FF000000000000000000 /* AppDelegate.m */; };
-		38303FB00000000000000000 /* InsultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B23D700000000000000000 /* InsultViewController.m */; };
-		744294000000000000000000 /* PreviousInsultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16573C000000000000000000 /* PreviousInsultsController.m */; };
-		C9111E000000000000000000 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3119A1500000000000000000 /* ViewController.m */; };
+		286532900000000000000000 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8EC7300000000000000000 /* Cocoa.framework */; };
+		80500C000000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D06D000000000000000000 /* Foundation.framework */; };
+		9953D7000000000000000000 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 163F29300000000000000000 /* Info.plist */; };
+		838733000000000000000000 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FC0CF000000000000000000 /* Entitlements.plist */; };
+		19DC74700000000000000000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C018600000000000000000 /* Main.storyboard */; };
+		2EC0DBC00000000000000000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C7BA200000000000000000 /* Assets.xcassets */; };
+		B058BA000000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2331E8B00000000000000000 /* AppDelegate.m */; };
+		3CC12E800000000000000000 /* InsultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CAA2800000000000000000 /* InsultViewController.m */; };
+		391FB6E00000000000000000 /* PreviousInsultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D6E2000000000000000000 /* PreviousInsultsController.m */; };
+		1308DF500000000000000000 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4FDA000000000000000000 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		39E6AC100000000000000000 /* InsultGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "InsultGenerator.app"; path = "InsultGenerator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DB3B5000000000000000000 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cocoa.framework"; path = "System/Library/Frameworks/Cocoa.framework"; sourceTree = SDKROOT; };
-		2B5DC4A00000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; };
-		38AB37B00000000000000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = "Info.plist"; sourceTree = "<group>"; };
-		2E2CA3200000000000000000 /* Entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Entitlements.plist"; path = "Entitlements.plist"; sourceTree = "<group>"; };
-		1C1F9D400000000000000000 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Main.storyboard"; path = "Main.storyboard"; sourceTree = "<group>"; };
-		2600C4B00000000000000000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Assets.xcassets"; path = "Assets.xcassets"; sourceTree = "<group>"; };
-		91C0CB000000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate.h"; path = "AppDelegate.h"; sourceTree = "<group>"; };
-		63E3FF000000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate.m"; path = "AppDelegate.m"; sourceTree = "<group>"; };
-		11FC72400000000000000000 /* InsultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "InsultViewController.h"; path = "InsultViewController.h"; sourceTree = "<group>"; };
-		39B23D700000000000000000 /* InsultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "InsultViewController.m"; path = "InsultViewController.m"; sourceTree = "<group>"; };
-		21E004500000000000000000 /* PreviousInsultsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PreviousInsultsController.h"; path = "PreviousInsultsController.h"; sourceTree = "<group>"; };
-		16573C000000000000000000 /* PreviousInsultsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PreviousInsultsController.m"; path = "PreviousInsultsController.m"; sourceTree = "<group>"; };
-		30E026F00000000000000000 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ViewController.h"; path = "ViewController.h"; sourceTree = "<group>"; };
-		3119A1500000000000000000 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ViewController.m"; path = "ViewController.m"; sourceTree = "<group>"; };
+		5CEAA4000000000000000000 /* InsultGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "InsultGenerator.app"; path = "InsultGenerator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B8EC7300000000000000000 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cocoa.framework"; path = "System/Library/Frameworks/Cocoa.framework"; sourceTree = SDKROOT; };
+		82D06D000000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; };
+		163F29300000000000000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = "Info.plist"; sourceTree = "<group>"; };
+		9FC0CF000000000000000000 /* Entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Entitlements.plist"; path = "Entitlements.plist"; sourceTree = "<group>"; };
+		28C018600000000000000000 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Main.storyboard"; path = "Main.storyboard"; sourceTree = "<group>"; };
+		24C7BA200000000000000000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Assets.xcassets"; path = "Assets.xcassets"; sourceTree = "<group>"; };
+		3443FCB00000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate.h"; path = "AppDelegate.h"; sourceTree = "<group>"; };
+		2331E8B00000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate.m"; path = "AppDelegate.m"; sourceTree = "<group>"; };
+		1663E2400000000000000000 /* InsultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "InsultViewController.h"; path = "InsultViewController.h"; sourceTree = "<group>"; };
+		22CAA2800000000000000000 /* InsultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "InsultViewController.m"; path = "InsultViewController.m"; sourceTree = "<group>"; };
+		982F4A000000000000000000 /* PreviousInsultsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PreviousInsultsController.h"; path = "PreviousInsultsController.h"; sourceTree = "<group>"; };
+		21D6E2000000000000000000 /* PreviousInsultsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "PreviousInsultsController.m"; path = "PreviousInsultsController.m"; sourceTree = "<group>"; };
+		159A99D00000000000000000 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ViewController.h"; path = "ViewController.h"; sourceTree = "<group>"; };
+		2B4FDA000000000000000000 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ViewController.m"; path = "ViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		37E15EB00000000000000000 /* Frameworks */ = {
+		26F686000000000000000000 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24513F700000000000000000 /* Cocoa.framework in Frameworks */,
-				3DB515D00000000000000000 /* Foundation.framework in Frameworks */,
+				286532900000000000000000 /* Cocoa.framework in Frameworks */,
+				80500C000000000000000000 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		36EC54B00000000000000000 = {
+		15EAAB600000000000000000 = {
 			isa = PBXGroup;
 			children = (
-				2E4EFA700000000000000000 /* InsultGenerator */,
-				20C6CDF00000000000000000 /* Frameworks */,
-				26FD3DE00000000000000000 /* Products */,
+				540066000000000000000000 /* InsultGenerator */,
+				2F4039700000000000000000 /* Frameworks */,
+				294205200000000000000000 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		26FD3DE00000000000000000 /* Products */ = {
+		294205200000000000000000 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				39E6AC100000000000000000 /* InsultGenerator.app */,
+				5CEAA4000000000000000000 /* InsultGenerator.app */,
 			);
 			name = "Products";
 			sourceTree = "<group>";
 		};
-		20C6CDF00000000000000000 /* Frameworks */ = {
+		2F4039700000000000000000 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6DB3B5000000000000000000 /* Cocoa.framework */,
-				2B5DC4A00000000000000000 /* Foundation.framework */,
+				2B8EC7300000000000000000 /* Cocoa.framework */,
+				82D06D000000000000000000 /* Foundation.framework */,
 			);
 			name = "Frameworks";
 			sourceTree = "<group>";
 		};
-		2E4EFA700000000000000000 /* InsultGenerator */ = {
+		540066000000000000000000 /* InsultGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				91C0CB000000000000000000 /* AppDelegate.h */,
-				63E3FF000000000000000000 /* AppDelegate.m */,
-				2600C4B00000000000000000 /* Assets.xcassets */,
-				2E2CA3200000000000000000 /* Entitlements.plist */,
-				38AB37B00000000000000000 /* Info.plist */,
-				11FC72400000000000000000 /* InsultViewController.h */,
-				39B23D700000000000000000 /* InsultViewController.m */,
-				1C1F9D400000000000000000 /* Main.storyboard */,
-				21E004500000000000000000 /* PreviousInsultsController.h */,
-				16573C000000000000000000 /* PreviousInsultsController.m */,
-				30E026F00000000000000000 /* ViewController.h */,
-				3119A1500000000000000000 /* ViewController.m */,
+				3443FCB00000000000000000 /* AppDelegate.h */,
+				2331E8B00000000000000000 /* AppDelegate.m */,
+				24C7BA200000000000000000 /* Assets.xcassets */,
+				9FC0CF000000000000000000 /* Entitlements.plist */,
+				163F29300000000000000000 /* Info.plist */,
+				1663E2400000000000000000 /* InsultViewController.h */,
+				22CAA2800000000000000000 /* InsultViewController.m */,
+				28C018600000000000000000 /* Main.storyboard */,
+				982F4A000000000000000000 /* PreviousInsultsController.h */,
+				21D6E2000000000000000000 /* PreviousInsultsController.m */,
+				159A99D00000000000000000 /* ViewController.h */,
+				2B4FDA000000000000000000 /* ViewController.m */,
 			);
 			name = "InsultGenerator";
 			sourceTree = "<group>";
@@ -98,13 +98,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1EE72D400000000000000000 /* InsultGenerator */ = {
+		33522E900000000000000000 /* InsultGenerator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 162097A00000000000000000 /* Build configuration list for PBXNativeTarget "InsultGenerator" */;
+			buildConfigurationList = DE3A33000000000000000000 /* Build configuration list for PBXNativeTarget "InsultGenerator" */;
 			buildPhases = (
-				725552000000000000000000 /* Sources */,
-				37E15EB00000000000000000 /* Frameworks */,
-				4FFE30000000000000000000 /* Resources */,
+				3D00BD300000000000000000 /* Sources */,
+				26F686000000000000000000 /* Frameworks */,
+				2506A7100000000000000000 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -112,64 +112,64 @@
 			);
 			name = "InsultGenerator";
 			productName = "InsultGenerator";
-			productReference = 39E6AC100000000000000000 /* InsultGenerator.app */;
+			productReference = 5CEAA4000000000000000000 /* InsultGenerator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2CFF00000000000000000000 /* Project object */ = {
+		D3BDFE000000000000000000 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0930;
 			};
-			buildConfigurationList = 194F70000000000000000000 /* Build configuration list for PBXProject "InsultGenerator" */;
+			buildConfigurationList = 371ADF300000000000000000 /* Build configuration list for PBXProject "InsultGenerator" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 36EC54B00000000000000000;
-			productRefGroup = 26FD3DE00000000000000000 /* Products */;
+			mainGroup = 15EAAB600000000000000000;
+			productRefGroup = 294205200000000000000000 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1EE72D400000000000000000 /* InsultGenerator */,
+				33522E900000000000000000 /* InsultGenerator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4FFE30000000000000000000 /* Resources */ = {
+		2506A7100000000000000000 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64BE9B000000000000000000 /* Info.plist in Resources */,
-				3E04F5A00000000000000000 /* Entitlements.plist in Resources */,
-				1F91BC200000000000000000 /* Main.storyboard in Resources */,
-				3D1C87A00000000000000000 /* Assets.xcassets in Resources */,
+				9953D7000000000000000000 /* Info.plist in Resources */,
+				838733000000000000000000 /* Entitlements.plist in Resources */,
+				19DC74700000000000000000 /* Main.storyboard in Resources */,
+				2EC0DBC00000000000000000 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		725552000000000000000000 /* Sources */ = {
+		3D00BD300000000000000000 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1606EAA00000000000000000 /* AppDelegate.m in Sources */,
-				38303FB00000000000000000 /* InsultViewController.m in Sources */,
-				744294000000000000000000 /* PreviousInsultsController.m in Sources */,
-				C9111E000000000000000000 /* ViewController.m in Sources */,
+				B058BA000000000000000000 /* AppDelegate.m in Sources */,
+				3CC12E800000000000000000 /* InsultViewController.m in Sources */,
+				391FB6E00000000000000000 /* PreviousInsultsController.m in Sources */,
+				1308DF500000000000000000 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		23CAF0600000000000000000 /* Debug */ = {
+		2FF1D9200000000000000000 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		22273A000000000000000000 /* Release */ = {
+		2F80A2200000000000000000 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -277,7 +277,7 @@
 			};
 			name = Release;
 		};
-		133610D00000000000000000 /* Debug */ = {
+		2B85B3500000000000000000 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon";
@@ -292,7 +292,7 @@
 			};
 			name = Debug;
 		};
-		2CE697800000000000000000 /* Release */ = {
+		7B34E5000000000000000000 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon";
@@ -310,25 +310,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		194F70000000000000000000 /* Build configuration list for PBXProject "InsultGenerator" */ = {
+		371ADF300000000000000000 /* Build configuration list for PBXProject "InsultGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				23CAF0600000000000000000 /* Debug */,
-				22273A000000000000000000 /* Release */,
+				2FF1D9200000000000000000 /* Debug */,
+				2F80A2200000000000000000 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		162097A00000000000000000 /* Build configuration list for PBXNativeTarget "InsultGenerator" */ = {
+		DE3A33000000000000000000 /* Build configuration list for PBXNativeTarget "InsultGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				133610D00000000000000000 /* Debug */,
-				2CE697800000000000000000 /* Release */,
+				2B85B3500000000000000000 /* Debug */,
+				7B34E5000000000000000000 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2CFF00000000000000000000 /* Project object */;
+	rootObject = D3BDFE000000000000000000 /* Project object */;
 }
