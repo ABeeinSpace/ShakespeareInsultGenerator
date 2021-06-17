@@ -72,7 +72,6 @@ namespace InsultGenerator_Win
             // InsultView
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(491, 285);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);

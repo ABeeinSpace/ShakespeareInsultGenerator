@@ -60,9 +60,10 @@ namespace InsultGenerator_Win
             // 
             // insultListLabel
             // 
+            this.insultListLabel.AutoSize = true;
             this.insultListLabel.Location = new System.Drawing.Point(12, 9);
             this.insultListLabel.Name = "insultListLabel";
-            this.insultListLabel.Size = new System.Drawing.Size(502, 277);
+            this.insultListLabel.Size = new System.Drawing.Size(168, 13);
             this.insultListLabel.TabIndex = 3;
             this.insultListLabel.Text = "There should be many insults here";
             // 
@@ -80,6 +81,7 @@ namespace InsultGenerator_Win
             this.Text = "Viewing Previously Generated Insults";
             this.Load += new System.EventHandler(this.ViewPreviousInsultsForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         private System.Windows.Forms.Label insultListLabel;
