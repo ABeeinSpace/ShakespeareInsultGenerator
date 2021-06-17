@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsultGenerator", "InsultGenerator\InsultGenerator.csproj", "{7D3609C9-AE18-405E-AA14-9D7CE9751CFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsultGenerator-Win", "InsultGenerator-Win\InsultGenerator-Win.csproj", "{81AB3592-754C-4F64-A130-E888460AD983}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -14,5 +16,9 @@ Global
 		{7D3609C9-AE18-405E-AA14-9D7CE9751CFF}.Release|x86.ActiveCfg = Release|x86
 		{7D3609C9-AE18-405E-AA14-9D7CE9751CFF}.Release|x86.Build.0 = Release|x86
 		{7D3609C9-AE18-405E-AA14-9D7CE9751CFF}.Release|x86.Deploy.0 = Release|x86
+		{81AB3592-754C-4F64-A130-E888460AD983}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{81AB3592-754C-4F64-A130-E888460AD983}.Debug|x86.Build.0 = Debug|Any CPU
+		{81AB3592-754C-4F64-A130-E888460AD983}.Release|x86.ActiveCfg = Release|Any CPU
+		{81AB3592-754C-4F64-A130-E888460AD983}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
