@@ -10,7 +10,7 @@ namespace InsultGenerator
 {
 	public partial class PreviousInsultsController : NSViewController
 	{
-		public bool ShowSaveAsSheet { get; set;} = true;
+		public bool ShowSaveAsSheet { get; set;} = false;
 		private string _generatedInsultsString;
 		
 		public PreviousInsultsController(IntPtr handle) : base(handle)
