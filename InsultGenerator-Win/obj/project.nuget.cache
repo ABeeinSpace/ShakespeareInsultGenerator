@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T2Nezz8NEAJIsN//yonRDK+F3DYi+FiWAYghmETAjed7droBOq6ruHSz/9LLT5KAOB9O4sv619bUTicu3u+KWQ==",
+  "dgSpecHash": "/VP/CntJMM8fYtznQL55CtKXOZKG7HEFnLAESkwAVODtUwA1xX3P4VuLc/VmuRudf1NI9skIRQV9yIXg/snBuA==",
   "success": true,
-  "projectFilePath": "/Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator-Win/InsultGenerator-Win.csproj",
+  "projectFilePath": "C:\\Users\\Plane\\Documents\\ShakespeareInsultGenerator\\InsultGenerator-Win\\InsultGenerator-Win.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

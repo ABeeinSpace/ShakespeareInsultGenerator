@@ -30,6 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.checkForUpdatesButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -54,11 +55,24 @@
             this.label2.Text = "To generate an insult, simply press the Generate an Insult button below";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // checkForUpdatesButton
+            // 
+            this.checkForUpdatesButton.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkForUpdatesButton.Enabled = false;
+            this.checkForUpdatesButton.Location = new System.Drawing.Point(213, 196);
+            this.checkForUpdatesButton.Name = "checkForUpdatesButton";
+            this.checkForUpdatesButton.Size = new System.Drawing.Size(117, 42);
+            this.checkForUpdatesButton.TabIndex = 3;
+            this.checkForUpdatesButton.Text = "Check for Updates";
+            this.checkForUpdatesButton.UseVisualStyleBackColor = true;
+            this.checkForUpdatesButton.Click += new System.EventHandler(this.checkForUpdatesButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(465, 251);
+            this.Controls.Add(this.checkForUpdatesButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -67,6 +81,10 @@
             this.Text = "Insult Generator-Inator";
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button checkForUpdatesButton;
+
+        private System.Windows.Forms.Button button2;
 
         private System.Windows.Forms.Label label2;
 

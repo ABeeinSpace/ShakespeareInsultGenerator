@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator-Win/InsultGenerator-Win.csproj": {}
+    "C:\\Users\\Plane\\Documents\\ShakespeareInsultGenerator\\InsultGenerator-Win\\InsultGenerator-Win.csproj": {}
   },
   "projects": {
-    "/Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator-Win/InsultGenerator-Win.csproj": {
+    "C:\\Users\\Plane\\Documents\\ShakespeareInsultGenerator\\InsultGenerator-Win\\InsultGenerator-Win.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator-Win/InsultGenerator-Win.csproj",
+        "projectUniqueName": "C:\\Users\\Plane\\Documents\\ShakespeareInsultGenerator\\InsultGenerator-Win\\InsultGenerator-Win.csproj",
         "projectName": "InsultGenerator-Win",
-        "projectPath": "/Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator-Win/InsultGenerator-Win.csproj",
-        "packagesPath": "/Users/aidanb/.nuget/packages/",
-        "outputPath": "/Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator-Win/obj/",
+        "projectPath": "C:\\Users\\Plane\\Documents\\ShakespeareInsultGenerator\\InsultGenerator-Win\\InsultGenerator-Win.csproj",
+        "packagesPath": "C:\\Users\\Plane\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Plane\\Documents\\ShakespeareInsultGenerator\\InsultGenerator-Win\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/aidanb/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Plane\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -55,7 +55,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

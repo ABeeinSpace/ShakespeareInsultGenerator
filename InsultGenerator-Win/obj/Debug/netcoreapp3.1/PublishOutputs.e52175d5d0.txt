@@ -1,0 +1,5 @@
+C:\Users\Plane\Documents\ShakespeareInsultGenerator\InsultGenerator-Win\bin\Debug\netcoreapp3.1\publish\InsultGenerator-Win.exe
+C:\Users\Plane\Documents\ShakespeareInsultGenerator\InsultGenerator-Win\bin\Debug\netcoreapp3.1\publish\InsultGenerator-Win.dll
+C:\Users\Plane\Documents\ShakespeareInsultGenerator\InsultGenerator-Win\bin\Debug\netcoreapp3.1\publish\InsultGenerator-Win.deps.json
+C:\Users\Plane\Documents\ShakespeareInsultGenerator\InsultGenerator-Win\bin\Debug\netcoreapp3.1\publish\InsultGenerator-Win.runtimeconfig.json
+C:\Users\Plane\Documents\ShakespeareInsultGenerator\InsultGenerator-Win\bin\Debug\netcoreapp3.1\publish\InsultGenerator-Win.pdb
