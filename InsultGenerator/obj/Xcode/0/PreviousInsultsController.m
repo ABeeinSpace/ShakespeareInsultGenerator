@@ -12,6 +12,7 @@
 @synthesize ClearInsultsButton = _ClearInsultsButton;
 @synthesize InsultsTextView = _InsultsTextView;
 @synthesize SaveInsultsButton = _SaveInsultsButton;
+@synthesize SaveResultTextField = _SaveResultTextField;
 
 - (IBAction)ClearInsultsButtonClicked:(NSButton *)sender {
 }

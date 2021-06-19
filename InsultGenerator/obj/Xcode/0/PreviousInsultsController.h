@@ -13,6 +13,7 @@
 	NSButton *_ClearInsultsButton;
 	NSTextView *_InsultsTextView;
 	NSButton *_SaveInsultsButton;
+	NSTextField *_SaveResultTextField;
 }
 
 @property (nonatomic, retain) IBOutlet NSButton *ClearInsultsButton;
@@ -20,6 +21,8 @@
 @property (nonatomic, retain) IBOutlet NSTextView *InsultsTextView;
 
 @property (nonatomic, retain) IBOutlet NSButton *SaveInsultsButton;
+
+@property (nonatomic, retain) IBOutlet NSTextField *SaveResultTextField;
 
 - (IBAction)ClearInsultsButtonClicked:(NSButton *)sender;
 

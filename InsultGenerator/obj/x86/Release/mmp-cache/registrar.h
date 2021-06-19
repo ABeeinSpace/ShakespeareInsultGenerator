@@ -26,8 +26,8 @@
 @class __NSObject_Disposer;
 @class InsultViewController;
 @class AppDelegate;
-@class ViewController;
 @class PreviousInsultsController;
+@class ViewController;
 
 @interface NSApplicationDelegate : NSObject<NSApplicationDelegate> {
 }
@@ -92,26 +92,12 @@
 	-(id) init;
 @end
 
-@interface ViewController : NSViewController {
-}
-	@property (nonatomic, assign) NSButton * InsultGeneratorButton;
-	-(void) release;
-	-(id) retain;
-	-(GCHandle) xamarinGetGCHandle;
-	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
-	-(enum XamarinGCHandleFlags) xamarinGetFlags;
-	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
-	-(NSButton *) InsultGeneratorButton;
-	-(void) setInsultGeneratorButton:(NSButton *)p0;
-	-(void) GenerateInsultButtonPressed:(NSButton *)p0;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
 @interface PreviousInsultsController : NSViewController {
 }
 	@property (nonatomic, assign) NSButton * ClearInsultsButton;
 	@property (nonatomic, assign) NSTextView * InsultsTextView;
 	@property (nonatomic, assign) NSButton * SaveInsultsButton;
+	@property (nonatomic, assign) NSTextField * SaveResultTextField;
 	-(void) release;
 	-(id) retain;
 	-(GCHandle) xamarinGetGCHandle;
@@ -124,10 +110,27 @@
 	-(void) setInsultsTextView:(NSTextView *)p0;
 	-(NSButton *) SaveInsultsButton;
 	-(void) setSaveInsultsButton:(NSButton *)p0;
+	-(NSTextField *) SaveResultTextField;
+	-(void) setSaveResultTextField:(NSTextField *)p0;
 	-(void) saveDocumentAs:(NSObject *)p0;
 	-(void) viewDidLoad;
 	-(void) ClearInsultsButtonClicked:(NSButton *)p0;
 	-(void) SaveInsultsButtonClicked:(NSButton *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface ViewController : NSViewController {
+}
+	@property (nonatomic, assign) NSButton * InsultGeneratorButton;
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(NSButton *) InsultGeneratorButton;
+	-(void) setInsultGeneratorButton:(NSButton *)p0;
+	-(void) GenerateInsultButtonPressed:(NSButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 

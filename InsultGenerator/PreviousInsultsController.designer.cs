@@ -22,6 +22,9 @@ namespace InsultGenerator
 		[Outlet]
 		AppKit.NSButton SaveInsultsButton { get; set; }
 
+		[Outlet]
+		AppKit.NSTextField SaveResultTextField { get; set; }
+
 		[Action ("ClearInsultsButtonClicked:")]
 		partial void ClearInsultsButtonClicked (AppKit.NSButton sender);
 
@@ -30,6 +33,11 @@ namespace InsultGenerator
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (ClearInsultsButton != null) {
+				ClearInsultsButton.Dispose ();
+				ClearInsultsButton = null;
+			}
+
 			if (InsultsTextView != null) {
 				InsultsTextView.Dispose ();
 				InsultsTextView = null;
@@ -40,9 +48,9 @@ namespace InsultGenerator
 				SaveInsultsButton = null;
 			}
 
-			if (ClearInsultsButton != null) {
-				ClearInsultsButton.Dispose ();
-				ClearInsultsButton = null;
+			if (SaveResultTextField != null) {
+				SaveResultTextField.Dispose ();
+				SaveResultTextField = null;
 			}
 
 		}

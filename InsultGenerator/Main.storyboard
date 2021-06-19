@@ -737,9 +737,8 @@
                                     <action selector="SaveInsultsButtonClicked:" target="zxR-0W-rRI" id="YGl-Mo-qjT"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GNs-aw-Qd4">
+                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GNs-aw-Qd4">
                                 <rect key="frame" x="344" y="13" width="66" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PAs-Ik-YU3">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -751,13 +750,25 @@ Gw
                                     <action selector="ClearInsultsButtonClicked:" target="zxR-0W-rRI" id="SpW-Mn-J84"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C3E-fw-PZl">
+                                <rect key="frame" x="308" y="22" width="37" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" placeholderString="         " id="Ghk-vV-dfs">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="S4U-8l-cY6" secondAttribute="bottom" constant="20" symbolic="YES" id="5Ei-iV-5H4"/>
+                            <constraint firstAttribute="bottom" secondItem="C3E-fw-PZl" secondAttribute="bottom" constant="22" id="Gm6-7u-aTM"/>
                             <constraint firstAttribute="trailing" secondItem="YRn-13-adT" secondAttribute="trailing" constant="20" symbolic="YES" id="R5u-dV-Wkb"/>
+                            <constraint firstItem="GNs-aw-Qd4" firstAttribute="leading" secondItem="C3E-fw-PZl" secondAttribute="trailing" constant="8" symbolic="YES" id="XNc-UX-2HA"/>
                             <constraint firstAttribute="trailing" secondItem="S4U-8l-cY6" secondAttribute="trailing" constant="20" symbolic="YES" id="hXT-uP-c0h"/>
                             <constraint firstItem="YRn-13-adT" firstAttribute="top" secondItem="kOD-dN-yVi" secondAttribute="top" constant="20" symbolic="YES" id="hzy-Uv-kZ2"/>
+                            <constraint firstItem="C3E-fw-PZl" firstAttribute="top" secondItem="YRn-13-adT" secondAttribute="bottom" constant="21" id="jAV-2I-raF"/>
                             <constraint firstItem="S4U-8l-cY6" firstAttribute="top" secondItem="YRn-13-adT" secondAttribute="bottom" constant="19" id="pt0-gj-edz"/>
+                            <constraint firstItem="C3E-fw-PZl" firstAttribute="leading" secondItem="kOD-dN-yVi" secondAttribute="leading" constant="310" id="xno-yn-2OE"/>
                             <constraint firstItem="YRn-13-adT" firstAttribute="leading" secondItem="kOD-dN-yVi" secondAttribute="leading" constant="20" symbolic="YES" id="yXA-3d-RaI"/>
                         </constraints>
                     </view>
@@ -765,11 +776,12 @@ Gw
                         <outlet property="ClearInsultsButton" destination="GNs-aw-Qd4" id="58S-nk-MND"/>
                         <outlet property="InsultsTextView" destination="BCT-1X-sfh" id="WrT-p2-ug7"/>
                         <outlet property="SaveInsultsButton" destination="S4U-8l-cY6" id="utb-We-5nr"/>
+                        <outlet property="SaveResultTextField" destination="C3E-fw-PZl" id="zdJ-PB-qnB"/>
                     </connections>
                 </viewController>
                 <customObject id="vpR-jJ-ilE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1500" y="839"/>
+            <point key="canvasLocation" x="1499.5" y="839"/>
         </scene>
         <!--Insult View Controller-->
         <scene sceneID="qUm-Xh-VuM">

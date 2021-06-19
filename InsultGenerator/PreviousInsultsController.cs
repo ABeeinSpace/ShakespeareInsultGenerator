@@ -10,7 +10,7 @@ namespace InsultGenerator
 {
 	public partial class PreviousInsultsController : NSViewController
 	{
-		public bool ShowSaveAsSheet { get; set;} = false;
+		public bool ShowSaveAsSheet { get; set;} = true;
 		private string _generatedInsultsString;
 		
 		public PreviousInsultsController(IntPtr handle) : base(handle)
@@ -45,30 +45,40 @@ namespace InsultGenerator
             NSWindow window = NSApplication.SharedApplication.KeyWindow;
             var dlg = new NSSavePanel ();
             dlg.Title = "Save Text File";
-            dlg.AllowedFileTypes = new[] { "txt", "html", "md", "css" };
+            dlg.AllowedFileTypes = new[] { "txt"};
             dlg.NameFieldStringValue = "insults.txt";
 
-            if (ShowSaveAsSheet) {
                 dlg.BeginSheet(window,(result ) =>
                 {
-                    StreamWriter streamWriter = new StreamWriter(dlg.Filename);
-                    streamWriter.Write(_generatedInsultsString);
-                    streamWriter.Close();
+                    if (result == 0)
+                    {
+                        Console.WriteLine("Save unsuccessful. User probably cancelled the save or we were denied permission by macOS.");
+                        SaveResultTextField.StringValue = "Save Unsuccessful. You probably clicked \"Cancel\".";
+                    }
+                    
+                    else if (result == 1)
+                    {
+
+                        try
+                        {
+                            StreamWriter streamWriter = new StreamWriter(dlg.Filename);
+                            streamWriter.Write(_generatedInsultsString);
+                            streamWriter.Close();
+                            SaveResultTextField.StringValue = "List successfully saved.";
+                        }
+                        catch (System.ArgumentNullException e)
+                        {
+                            var alert = new NSAlert()
+                            {
+                                AlertStyle = NSAlertStyle.Critical,
+                                InformativeText = "Shit's fucked yo",
+                                MessageText = "Boom",
+                            };
+                        }
+
+                    }
+
                 });
-            } else {
-                if (dlg.RunModal () == 1) {
-                    StreamWriter streamWriter = new StreamWriter(Convert.ToString(dlg.Url));
-                    streamWriter.Write(_generatedInsultsString);
-                    streamWriter.Close();
-                    // var alert = new NSAlert () {
-                    //     AlertStyle = NSAlertStyle.Critical,
-                    //     InformativeText = "We need to save the document here...",
-                    //     MessageText = "Save Document",
-                    // };
-                    // alert.RunModal ();
-                }
-            }
-        
         }
 
         public override void ViewDidLoad()
