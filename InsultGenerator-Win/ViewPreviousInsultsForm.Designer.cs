@@ -86,16 +86,13 @@ namespace InsultGenerator_Win
 
         private System.Windows.Forms.Label insultListLabel;
 
-        private System.Windows.Forms.Label label1;
-
-        private System.Windows.Forms.Label InsultListLabel;
+        
 
         private System.Windows.Forms.Button saveListButton;
         private System.Windows.Forms.Button clearInsultArrayButton;
 
-        private System.Windows.Forms.Button button2;
 
-        private System.Windows.Forms.Button button1;
+        
 
         #endregion
     }

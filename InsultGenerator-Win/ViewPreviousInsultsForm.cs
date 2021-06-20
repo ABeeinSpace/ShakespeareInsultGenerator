@@ -35,6 +35,7 @@ namespace InsultGenerator_Win
         private void clearInsultArrayButton_Click(object sender, EventArgs e)
         {
             generatedInsults.Clear();
+            Application.OpenForms[1].Close();
             this.Close();
         }
 

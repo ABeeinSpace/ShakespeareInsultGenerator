@@ -58,7 +58,6 @@
             // checkForUpdatesButton
             // 
             this.checkForUpdatesButton.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkForUpdatesButton.Enabled = false;
             this.checkForUpdatesButton.Location = new System.Drawing.Point(213, 196);
             this.checkForUpdatesButton.Name = "checkForUpdatesButton";
             this.checkForUpdatesButton.Size = new System.Drawing.Size(117, 42);
@@ -84,7 +83,6 @@
 
         private System.Windows.Forms.Button checkForUpdatesButton;
 
-        private System.Windows.Forms.Button button2;
 
         private System.Windows.Forms.Label label2;
 
