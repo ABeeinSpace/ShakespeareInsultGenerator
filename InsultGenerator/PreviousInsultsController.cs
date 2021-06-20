@@ -52,28 +52,28 @@ namespace InsultGenerator
                 {
                     if (result == 0)
                     {
-                        Console.WriteLine("Save unsuccessful. User probably cancelled the save or we were denied permission by macOS.");
-                        SaveResultTextField.StringValue = "Save Unsuccessful. You probably clicked \"Cancel\".";
+                        return;
                     }
                     
                     else if (result == 1)
                     {
-
                         try
                         {
-                            StreamWriter streamWriter = new StreamWriter(dlg.Filename);
+                            StreamWriter streamWriter = new StreamWriter(dlg.Url.Path);
                             streamWriter.Write(_generatedInsultsString);
                             streamWriter.Close();
-                            SaveResultTextField.StringValue = "List successfully saved.";
                         }
-                        catch (System.ArgumentNullException e)
+                        catch (System.UnauthorizedAccessException e)
                         {
-                            var alert = new NSAlert()
-                            {
-                                AlertStyle = NSAlertStyle.Critical,
-                                InformativeText = "Shit's fucked yo",
-                                MessageText = "Boom",
+                            var alert = new NSAlert() {
+                                AlertStyle = NSAlertStyle.Warning,
+                                InformativeText =
+                                    "We can't save here because you've denied us access. Please check Security & Privacy, then Files and Folders in System Preferences",
+                                MessageText = "Access Denied",
                             };
+
+                            alert.RunModal();
+
                         }
 
                     }

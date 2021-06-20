@@ -64,5 +64,10 @@ namespace InsultGenerator
 			GeneratedInsults.Add(insult);
 			return insult;
 		}
+
+		public void ClearLabel()
+		{
+			InsultLabel.StringValue = String.Empty;
+		}
 	}
 }

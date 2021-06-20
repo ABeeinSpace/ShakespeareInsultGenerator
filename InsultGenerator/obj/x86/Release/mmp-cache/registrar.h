@@ -26,8 +26,8 @@
 @class __NSObject_Disposer;
 @class InsultViewController;
 @class AppDelegate;
-@class PreviousInsultsController;
 @class ViewController;
+@class PreviousInsultsController;
 
 @interface NSApplicationDelegate : NSObject<NSApplicationDelegate> {
 }
@@ -92,6 +92,21 @@
 	-(id) init;
 @end
 
+@interface ViewController : NSViewController {
+}
+	@property (nonatomic, assign) NSButton * InsultGeneratorButton;
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(NSButton *) InsultGeneratorButton;
+	-(void) setInsultGeneratorButton:(NSButton *)p0;
+	-(void) GenerateInsultButtonPressed:(NSButton *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
 @interface PreviousInsultsController : NSViewController {
 }
 	@property (nonatomic, assign) NSButton * ClearInsultsButton;
@@ -116,21 +131,6 @@
 	-(void) viewDidLoad;
 	-(void) ClearInsultsButtonClicked:(NSButton *)p0;
 	-(void) SaveInsultsButtonClicked:(NSButton *)p0;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface ViewController : NSViewController {
-}
-	@property (nonatomic, assign) NSButton * InsultGeneratorButton;
-	-(void) release;
-	-(id) retain;
-	-(GCHandle) xamarinGetGCHandle;
-	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
-	-(enum XamarinGCHandleFlags) xamarinGetFlags;
-	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
-	-(NSButton *) InsultGeneratorButton;
-	-(void) setInsultGeneratorButton:(NSButton *)p0;
-	-(void) GenerateInsultButtonPressed:(NSButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
