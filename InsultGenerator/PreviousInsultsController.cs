@@ -2,7 +2,6 @@
 
 using System;
 using System.IO;
-using System.Collections;
 using Foundation;
 using AppKit;
 
@@ -16,8 +15,8 @@ namespace InsultGenerator
 		public PreviousInsultsController(IntPtr handle) : base(handle)
 		{
 		}
-		
-        public void GetDataFromParent()
+
+        private void GetDataFromParent()
         {
             _generatedInsultsString = "";
             for (int i = 0; i < InsultViewController.GeneratedInsults.Count; i++)
@@ -31,11 +30,13 @@ namespace InsultGenerator
             ShowSaveAs(sender);
         }
 
-        partial void ClearInsultsButtonClicked(AppKit.NSButton sender)
+        partial void ClearInsultsButtonClicked(NSButton sender)
         {
             InsultViewController.GeneratedInsults.Clear();
             InsultsTextView.Value = string.Empty;
-            NSApplication.SharedApplication.KeyWindow.Close();
+            NSWindow window = NSApplication.SharedApplication.DangerousWindows[1];
+            window.Close();
+            NSApplication.SharedApplication.DangerousWindows[2].Close();
         }
         
         [Export("saveDocumentAs:")]
@@ -52,7 +53,6 @@ namespace InsultGenerator
                 {
                     if (result == 0)
                     {
-                        return;
                     }
                     
                     else if (result == 1)
@@ -63,7 +63,7 @@ namespace InsultGenerator
                             streamWriter.Write(_generatedInsultsString);
                             streamWriter.Close();
                         }
-                        catch (System.UnauthorizedAccessException e)
+                        catch (UnauthorizedAccessException e)
                         {
                             var alert = new NSAlert() {
                                 AlertStyle = NSAlertStyle.Warning,
@@ -71,6 +71,8 @@ namespace InsultGenerator
                                     "We can't save here because you've denied us access. Please check Security & Privacy, then Files and Folders in System Preferences",
                                 MessageText = "Access Denied",
                             };
+                            
+                            Console.WriteLine(e.StackTrace);
 
                             alert.RunModal();
 

@@ -5,7 +5,7 @@
 /Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator/obj/x86/Debug/ibtool/_BundleResourceWithLogicalName.items
 /Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator/obj/x86/Debug/coremlc/_PartialAppManifest.items
 /Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator/obj/x86/Debug/coremlc/_BundleResourceWithLogicalName.items
-/Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator/obj/x86/Debug/InsultGenerator.csprojAssemblyReference.cache
+/Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator/obj/x86/Debug/InsultGenerator.csproj.AssemblyReference.cache
 /Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator/obj/x86/Debug/InsultGenerator.csproj.CoreCompileInputs.cache
 /Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator/obj/x86/Debug/InsultGenerator.exe
 /Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator/obj/x86/Debug/InsultGenerator.pdb

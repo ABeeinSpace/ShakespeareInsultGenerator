@@ -21,6 +21,51 @@
 				<integer>13</integer>
 			</dict>
 		</array>
+		<key>9V3-Tb-cDy</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>9V3-Tb-cDy</string>
+				</array>
+				<key>message</key>
+				<string>View is clipping its content</string>
+				<key>type</key>
+				<string>IBIssueTypeClippedContent</string>
+				<key>type-value</key>
+				<integer>13</integer>
+			</dict>
+		</array>
+		<key>9mv-0x-Gow</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>9mv-0x-Gow</string>
+				</array>
+				<key>message</key>
+				<string>View is clipping its content</string>
+				<key>type</key>
+				<string>IBIssueTypeClippedContent</string>
+				<key>type-value</key>
+				<integer>13</integer>
+			</dict>
+		</array>
+		<key>IgU-TD-tqe</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>IgU-TD-tqe</string>
+				</array>
+				<key>message</key>
+				<string>View is clipping its content</string>
+				<key>type</key>
+				<string>IBIssueTypeClippedContent</string>
+				<key>type-value</key>
+				<integer>13</integer>
+			</dict>
+		</array>
 		<key>OqC-Xn-QOH</key>
 		<array>
 			<dict>
@@ -42,6 +87,36 @@
 				<key>affected-objects</key>
 				<array>
 					<string>SBa-kL-aJy</string>
+				</array>
+				<key>message</key>
+				<string>View is clipping its content</string>
+				<key>type</key>
+				<string>IBIssueTypeClippedContent</string>
+				<key>type-value</key>
+				<integer>13</integer>
+			</dict>
+		</array>
+		<key>o1V-dj-BvG</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>o1V-dj-BvG</string>
+				</array>
+				<key>message</key>
+				<string>View is clipping its content</string>
+				<key>type</key>
+				<string>IBIssueTypeClippedContent</string>
+				<key>type-value</key>
+				<integer>13</integer>
+			</dict>
+		</array>
+		<key>yGJ-Dv-nqF</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>yGJ-Dv-nqF</string>
 				</array>
 				<key>message</key>
 				<string>View is clipping its content</string>

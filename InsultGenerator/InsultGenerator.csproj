@@ -86,5 +86,5 @@
       <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\64.png" />
       <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     </ItemGroup>
-    <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
+    <Import Project="$(MSBuildExtensionsPath)Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>

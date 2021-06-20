@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="18009"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="the Touch Bar" minToolsVersion="8.1" minSystemVersion="10.12.2" requiredIntegratedClassName="NSTouchBar"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -762,6 +764,40 @@ Gw
                             <constraint firstItem="YRn-13-adT" firstAttribute="leading" secondItem="kOD-dN-yVi" secondAttribute="leading" constant="20" symbolic="YES" id="yXA-3d-RaI"/>
                         </constraints>
                     </view>
+                    <touchBar key="touchBar" id="gV7-Bk-g1Y">
+                        <touchBarItems>
+                            <touchBarItem id="Msx-Lk-RlB">
+                                <viewController key="viewController" id="LZO-7h-sYm">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o1V-dj-BvG">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="juB-m2-iNk">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="ClearInsultsButtonClicked:" target="zxR-0W-rRI" id="lMT-xv-Sic"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarItem id="XuD-0t-3cC">
+                                <viewController key="viewController" id="W6Y-XB-om3">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9mv-0x-Gow">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DS7-A8-cWg">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="SaveInsultsButtonClicked:" target="zxR-0W-rRI" id="Mz5-lY-uQj"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                        </touchBarItems>
+                    </touchBar>
                     <connections>
                         <outlet property="ClearInsultsButton" destination="GNs-aw-Qd4" id="58S-nk-MND"/>
                         <outlet property="InsultsTextView" destination="BCT-1X-sfh" id="WrT-p2-ug7"/>
@@ -832,6 +868,38 @@ DQ
                             <constraint firstAttribute="trailing" secondItem="72o-YG-fK9" secondAttribute="trailing" constant="20" symbolic="YES" id="qlc-Nc-c9P"/>
                         </constraints>
                     </view>
+                    <touchBar key="touchBar" id="xRx-I7-vlg">
+                        <touchBarItems>
+                            <touchBarItem id="f24-8n-utf">
+                                <viewController key="viewController" id="2DY-Ei-lNJ">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IgU-TD-tqe">
+                                        <rect key="frame" x="0.0" y="0.0" width="252" height="30"/>
+                                        <buttonCell key="cell" type="push" title="View Previously Generated Insults" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ezm-n1-yHR">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="PreviouslyGeneratedInsultsButtonPressed:" target="aij-xO-yrA" id="4gD-IM-CG1"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarItem id="mIW-pu-R9v">
+                                <viewController key="viewController" id="eaZ-mG-hlG">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yGJ-Dv-nqF">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="30"/>
+                                        <buttonCell key="cell" type="push" title="Generate Another Insult" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HNc-5E-hP1">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="GenerateAnInsultButtonPressed:" target="aij-xO-yrA" id="itC-2h-LhY"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                        </touchBarItems>
+                    </touchBar>
                     <connections>
                         <outlet property="GenerateAnInsultButton" destination="72o-YG-fK9" id="q7O-rX-09G"/>
                         <outlet property="InsultLabel" destination="k4I-i9-NKs" id="4tw-V3-wXN"/>
@@ -894,6 +962,27 @@ DQ
                             <constraint firstItem="pQE-Xe-GGs" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="dO3-8W-v9T"/>
                         </constraints>
                     </view>
+                    <touchBar key="touchBar" id="jcm-Nc-8Zp">
+                        <touchBarItems>
+                            <touchBarItem id="m3V-gP-Z2O">
+                                <viewController key="viewController" id="GXe-ID-cBs">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9V3-Tb-cDy">
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="30"/>
+                                        <buttonCell key="cell" type="push" title="Generate an Insult" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ptw-gG-nSg">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="GenerateInsultButtonPressed:" target="XfG-lQ-9wD" id="Qh9-vb-vSg"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                        </touchBarItems>
+                    </touchBar>
                     <connections>
                         <outlet property="InsultGeneratorButton" destination="SBa-kL-aJy" id="cQ7-YP-8ZS"/>
                     </connections>

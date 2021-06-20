@@ -1,6 +1,6 @@
-# Version: 7.14.0.1 (d16-10: fe0e2c518)
-/Library/Frameworks/Xamarin.Mac.framework/Versions/7.14.0.1/lib/mmp/mmp.exe \
-	/Library/Frameworks/Xamarin.Mac.framework/Versions/7.14.0.1/bin/../lib/mmp/mmp.exe \
+# Version: 7.14.0.3 (d16-10: 17fdcf569)
+/Library/Frameworks/Xamarin.Mac.framework/Versions/7.14.0.3/lib/mmp/mmp.exe \
+	/Library/Frameworks/Xamarin.Mac.framework/Versions/7.14.0.3/bin/../lib/mmp/mmp.exe \
 	'/target-framework:Xamarin.Mac,Version=v2.0,Profile=Mobile' \
 	--http-message-handler=HttpClientHandler \
 	'\"--cache=/Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator/obj/x86/Release/mmp-cache\"' \
