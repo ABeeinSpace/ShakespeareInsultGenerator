@@ -5,6 +5,10 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <RootNamespace>InsultGenerator_Win</RootNamespace>
         <UseWindowsForms>true</UseWindowsForms>
+        <IsPackable>false</IsPackable>
+        <Product>Insult Generator</Product>
+        <AssemblyVersion>1.4.2</AssemblyVersion>
+        <NeutralLanguage>en-US</NeutralLanguage>
     </PropertyGroup>
 
     <ItemGroup>
