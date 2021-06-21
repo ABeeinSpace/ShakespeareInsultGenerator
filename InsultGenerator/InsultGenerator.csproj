@@ -77,14 +77,20 @@
         <InterfaceDefinition Include="Main.storyboard" />
     </ItemGroup>
     <ItemGroup>
-      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024.png" />
-      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\128.png" />
-      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\16.png" />
-      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\256.png" />
-      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\32.png" />
-      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\512.png" />
-      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\64.png" />
       <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_128.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_128@2x.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_16.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_16@2x.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_256.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_256@2x.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_32.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_32@2x.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_512.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon_512@2x.png" />
+      <ImageAsset Include="Assets.xcassets\Contents.json">
+        <Visible>False</Visible>
+      </ImageAsset>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>
