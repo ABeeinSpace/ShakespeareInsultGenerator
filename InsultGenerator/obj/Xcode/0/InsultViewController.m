@@ -11,6 +11,7 @@
 
 @synthesize GenerateAnInsultButton = _GenerateAnInsultButton;
 @synthesize InsultLabel = _InsultLabel;
+@synthesize InsultsTouchBarLabel = _InsultsTouchBarLabel;
 @synthesize PreviouslyGeneratedInsultsButton = _PreviouslyGeneratedInsultsButton;
 
 - (IBAction)GenerateAnInsultButtonPressed:(NSButton *)sender {

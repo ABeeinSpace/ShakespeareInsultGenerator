@@ -111,6 +111,21 @@
 				<integer>13</integer>
 			</dict>
 		</array>
+		<key>xss-2R-N3j</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>xss-2R-N3j</string>
+				</array>
+				<key>message</key>
+				<string>NSTextField's height does not match its intrinsic content size, use "Size to Fit Content" to correct</string>
+				<key>type</key>
+				<string>IBIssueTypeIntrinsicSizeMismatch</string>
+				<key>type-value</key>
+				<integer>22</integer>
+			</dict>
+		</array>
 		<key>yGJ-Dv-nqF</key>
 		<array>
 			<dict>

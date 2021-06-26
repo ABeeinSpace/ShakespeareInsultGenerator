@@ -19,6 +19,12 @@
       <LogicalName>Main.storyboardc/aij-xO-yrA-view-z7R-Ou-oiN.nib</LogicalName>
       <OriginalItemSpec>obj/x86/Release/ibtool/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/x86/Release/ibtool/Main.storyboardc/Kg9-fr-aHK-view-ylu-zz-HLx.nib">
+      <Optimize>false</Optimize>
+      <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
+      <LogicalName>Main.storyboardc/Kg9-fr-aHK-view-ylu-zz-HLx.nib</LogicalName>
+      <OriginalItemSpec>obj/x86/Release/ibtool/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/x86/Release/ibtool/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib">
       <Optimize>false</Optimize>
       <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
@@ -29,6 +35,12 @@
       <Optimize>false</Optimize>
       <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
       <LogicalName>Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</LogicalName>
+      <OriginalItemSpec>obj/x86/Release/ibtool/Main.storyboardc</OriginalItemSpec>
+    </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/x86/Release/ibtool/Main.storyboardc/NSWindowController-pPZ-xc-cuE.nib">
+      <Optimize>false</Optimize>
+      <InterfaceDefinition>Main.storyboard</InterfaceDefinition>
+      <LogicalName>Main.storyboardc/NSWindowController-pPZ-xc-cuE.nib</LogicalName>
       <OriginalItemSpec>obj/x86/Release/ibtool/Main.storyboardc</OriginalItemSpec>
     </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/x86/Release/ibtool/Main.storyboardc/zxR-0W-rRI-view-kOD-dN-yVi.nib">
