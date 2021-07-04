@@ -18,10 +18,7 @@ namespace InsultGenerator_Win
 
         private void checkForUpdatesButton_Click(object sender, EventArgs e)
         {
-            string message = "This feature has not been implemented yet!";
-            string title = "Feature Not Implemented";
-
-            MessageBox.Show(message, title);
+            System.Diagnostics.Process.Start("explorer.exe", "https://github.com/ABeeinSpace/ShakespeareInsultGenerator/releases/");
         }
     }
 }

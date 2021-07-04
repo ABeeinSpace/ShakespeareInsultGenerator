@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "01Przlul7vothPlmwfw5Y8nTFjZUVH1VlHsWTlpNrp2oZXU30JybKM7antETAiGP0DwisYdiZhv/jQY48/LMOw==",
+  "dgSpecHash": "sw0j+8mXC9EniTka0940XiZ7565p8oR+jqYfjsF9OJtxcG/I27ngXwSscr6PX86KK/a6Lzs+zqIZRkiywPsydg==",
   "success": true,
-  "projectFilePath": "/Users/aidanb/Developer/C# Projects/InsultGenerator/InsultGenerator-Win/InsultGenerator-Win.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Aidan Border\\Documents\\ShakespeareInsultGenerator\\InsultGenerator-Win\\InsultGenerator-Win.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aidan Border\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Aidan Border\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Aidan Border\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Aidan Border\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.15\\microsoft.netcore.app.host.win-x64.3.1.15.nupkg.sha512"
+  ],
   "logs": []
 }
