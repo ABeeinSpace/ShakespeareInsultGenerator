@@ -20,6 +20,9 @@ namespace InsultGenerator
 		AppKit.NSTextField InsultLabel { get; set; }
 
 		[Outlet]
+		AppKit.NSTextField InsultsTouchBarLabel { get; set; }
+
+		[Outlet]
 		AppKit.NSButton PreviouslyGeneratedInsultsButton { get; set; }
 
 		[Action ("GenerateAnInsultButtonPressed:")]
@@ -43,6 +46,11 @@ namespace InsultGenerator
 			if (PreviouslyGeneratedInsultsButton != null) {
 				PreviouslyGeneratedInsultsButton.Dispose ();
 				PreviouslyGeneratedInsultsButton = null;
+			}
+
+			if (InsultsTouchBarLabel != null) {
+				InsultsTouchBarLabel.Dispose ();
+				InsultsTouchBarLabel = null;
 			}
 
 		}

@@ -16,8 +16,6 @@ namespace InsultGenerator
 			
 		}
 
-
-
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
@@ -33,6 +31,7 @@ namespace InsultGenerator
 		{
 			string insult = InsultGeneratorInator(_rng);
 			InsultLabel.StringValue = insult;
+			InsultsTouchBarLabel.StringValue = insult;
 		}
 
 		partial void PreviouslyGeneratedInsultsButtonPressed(NSButton sender)

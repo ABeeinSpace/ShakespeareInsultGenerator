@@ -12,12 +12,15 @@
 @interface InsultViewController : NSViewController {
 	NSButton *_GenerateAnInsultButton;
 	NSTextField *_InsultLabel;
+	NSTextField *_InsultsTouchBarLabel;
 	NSButton *_PreviouslyGeneratedInsultsButton;
 }
 
 @property (nonatomic, retain) IBOutlet NSButton *GenerateAnInsultButton;
 
 @property (nonatomic, retain) IBOutlet NSTextField *InsultLabel;
+
+@property (nonatomic, retain) IBOutlet NSTextField *InsultsTouchBarLabel;
 
 @property (nonatomic, retain) IBOutlet NSButton *PreviouslyGeneratedInsultsButton;
 

@@ -26,6 +26,7 @@
 @class __NSObject_Disposer;
 @class InsultViewController;
 @class AppDelegate;
+@class PreferencesViewController;
 @class ViewController;
 @class PreviousInsultsController;
 
@@ -59,6 +60,7 @@
 }
 	@property (nonatomic, assign) NSButton * GenerateAnInsultButton;
 	@property (nonatomic, assign) NSTextField * InsultLabel;
+	@property (nonatomic, assign) NSTextField * InsultsTouchBarLabel;
 	@property (nonatomic, assign) NSButton * PreviouslyGeneratedInsultsButton;
 	-(void) release;
 	-(id) retain;
@@ -70,6 +72,8 @@
 	-(void) setGenerateAnInsultButton:(NSButton *)p0;
 	-(NSTextField *) InsultLabel;
 	-(void) setInsultLabel:(NSTextField *)p0;
+	-(NSTextField *) InsultsTouchBarLabel;
+	-(void) setInsultsTouchBarLabel:(NSTextField *)p0;
 	-(NSButton *) PreviouslyGeneratedInsultsButton;
 	-(void) setPreviouslyGeneratedInsultsButton:(NSButton *)p0;
 	-(void) viewDidLoad;
@@ -90,6 +94,25 @@
 	-(void) applicationWillTerminate:(NSNotification *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
+@end
+
+@interface PreferencesViewController : NSViewController {
+}
+	@property (nonatomic, assign) NSComboBox * AppearanceComboBox;
+	@property (nonatomic, assign) NSSwitch * TouchBarEnableSwitch;
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(NSComboBox *) AppearanceComboBox;
+	-(void) setAppearanceComboBox:(NSComboBox *)p0;
+	-(NSSwitch *) TouchBarEnableSwitch;
+	-(void) setTouchBarEnableSwitch:(NSSwitch *)p0;
+	-(void) AppearanceComboBoxChanged:(NSComboBox *)p0;
+	-(void) TouchBarSwitchStateChanged:(NSSwitch *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
 @interface ViewController : NSViewController {

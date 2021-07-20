@@ -7,9 +7,14 @@
         <UseWindowsForms>true</UseWindowsForms>
         <IsPackable>false</IsPackable>
         <Product>Insult Generator</Product>
-        <AssemblyVersion>1.4.2</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <NeutralLanguage>en-US</NeutralLanguage>
+<<<<<<< HEAD
         <ApplicationManifest>app.manifest</ApplicationManifest>
+=======
+        <PackageVersion>1.5</PackageVersion>
+        <Authors>Aidan B</Authors>
+>>>>>>> 6b8505ae2eb25e738ef1bd1db4536bed245671f7
     </PropertyGroup>
 
     <ItemGroup>
@@ -19,6 +24,16 @@
       <Compile Update="ViewPreviousInsultsForm.cs">
         <SubType>Form</SubType>
       </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\AutoUpdate.xml">
+        <Link>AutoUpdate.xml</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Autoupdater.NET.Official" Version="1.6.4" />
     </ItemGroup>
 
 </Project>
