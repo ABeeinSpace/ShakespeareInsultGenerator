@@ -9,6 +9,7 @@
         <Product>Insult Generator</Product>
         <AssemblyVersion>1.4.2</AssemblyVersion>
         <NeutralLanguage>en-US</NeutralLanguage>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
     </PropertyGroup>
 
     <ItemGroup>
