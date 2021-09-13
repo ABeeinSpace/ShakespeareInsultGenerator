@@ -24,6 +24,7 @@
 @class __NSPressGestureRecognizer;
 @class __NSRotationGestureRecognizer;
 @class __NSObject_Disposer;
+@class AppPreferences;
 @class InsultViewController;
 @class AppDelegate;
 @class PreferencesViewController;
@@ -54,6 +55,21 @@
 @interface __NSGestureRecognizerParametrizedToken : __NSGestureRecognizerToken {
 }
 	-(void) target:(NSGestureRecognizer *)p0;
+@end
+
+@interface AppPreferences : NSObject {
+}
+	@property (nonatomic, assign) BOOL DefaultTouchBarState;
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(BOOL) DefaultTouchBarState;
+	-(void) setDefaultTouchBarState:(BOOL)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
 @end
 
 @interface InsultViewController : NSViewController {

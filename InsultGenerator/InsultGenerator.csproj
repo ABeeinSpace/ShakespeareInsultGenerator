@@ -48,7 +48,7 @@
         <UseRefCounting>true</UseRefCounting>
         <LinkMode>SdkOnly</LinkMode>
         <PlatformTarget>x86</PlatformTarget>
-        <MtouchLink>SdkOnly</MtouchLink>
+        <MtouchLink>None</MtouchLink>
         <CodeSigningKey>Mac Developer</CodeSigningKey>
         <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
         <AOTMode>None</AOTMode>
@@ -66,6 +66,7 @@
         <None Include="Info.plist" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="AppPreferences.cs" />
         <Compile Include="InsultViewController.cs" />
         <Compile Include="InsultViewController.designer.cs">
           <DependentUpon>InsultViewController.cs</DependentUpon>
@@ -105,4 +106,5 @@
       </ImageAsset>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
+    <Target Name="_VerifyBuildSignature" />
 </Project>

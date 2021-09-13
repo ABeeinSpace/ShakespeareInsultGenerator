@@ -229,7 +229,41 @@ exception_handling:;
 }
 
 
-static id native_to_managed_trampoline_7 (id self, SEL _cmd, MonoMethod **managed_method_ptr, uint32_t token_ref)
+static void native_to_managed_trampoline_7 (id self, SEL _cmd, MonoMethod **managed_method_ptr, BOOL p0, uint32_t token_ref)
+{
+	GCHandle exception_gchandle = INVALID_GCHANDLE;
+	MonoMethod *managed_method = *managed_method_ptr;
+	void *arg_ptrs [1];
+	MONO_ASSERT_GC_SAFE_OR_DETACHED;
+	MONO_THREAD_ATTACH;
+
+	MonoObject *mthis = NULL;
+	if (self) {
+		mthis = xamarin_get_managed_object_for_ptr_fast (self, &exception_gchandle);
+		if (exception_gchandle != INVALID_GCHANDLE) goto exception_handling;
+	}
+	if (!managed_method) {
+		GCHandle reflection_method_handle = xamarin_get_method_from_token (token_ref, &exception_gchandle);
+		MonoReflectionMethod *reflection_method = (MonoReflectionMethod *) xamarin_gchandle_unwrap (reflection_method_handle);
+		if (exception_gchandle != INVALID_GCHANDLE) goto exception_handling;
+		managed_method = xamarin_get_reflection_method_method (reflection_method);
+		*managed_method_ptr = managed_method;
+	}
+	xamarin_check_for_gced_object (mthis, _cmd, self, managed_method, &exception_gchandle);
+	if (exception_gchandle != INVALID_GCHANDLE) goto exception_handling;
+	arg_ptrs [0] = &p0;
+
+	mono_runtime_invoke (managed_method, mthis, arg_ptrs, NULL);
+
+exception_handling:;
+	MONO_THREAD_DETACH;
+	if (exception_gchandle != INVALID_GCHANDLE)
+		xamarin_process_managed_exception_gchandle (exception_gchandle);
+	return;
+}
+
+
+static id native_to_managed_trampoline_8 (id self, SEL _cmd, MonoMethod **managed_method_ptr, uint32_t token_ref)
 {
 	MonoObject *retval = NULL;
 	GCHandle exception_gchandle = INVALID_GCHANDLE;
@@ -738,6 +772,78 @@ exception_handling:;
 	}
 @end
 
+@implementation AppPreferences {
+	XamarinObject __monoObjectGCHandle;
+}
+	-(void) release
+	{
+		xamarin_release_trampoline (self, _cmd);
+	}
+
+	-(id) retain
+	{
+		return xamarin_retain_trampoline (self, _cmd);
+	}
+
+	-(GCHandle) xamarinGetGCHandle
+	{
+		return __monoObjectGCHandle.gc_handle;
+	}
+
+	-(bool) xamarinSetGCHandle: (GCHandle) gc_handle flags: (enum XamarinGCHandleFlags) flags
+	{
+		if (((flags & XamarinGCHandleFlags_InitialSet) == XamarinGCHandleFlags_InitialSet) && __monoObjectGCHandle.gc_handle != INVALID_GCHANDLE) {
+			return false;
+		}
+		flags = (enum XamarinGCHandleFlags) (flags & ~XamarinGCHandleFlags_InitialSet);
+		__monoObjectGCHandle.gc_handle = gc_handle;
+		__monoObjectGCHandle.flags = flags;
+		__monoObjectGCHandle.native_object = self;
+		return true;
+	}
+
+	-(enum XamarinGCHandleFlags) xamarinGetFlags
+	{
+		return __monoObjectGCHandle.flags;
+	}
+
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags
+	{
+		__monoObjectGCHandle.flags = flags;
+	}
+
+
+	-(BOOL) DefaultTouchBarState
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_2 (self, _cmd, &managed_method, 0x112);
+	}
+
+	-(void) setDefaultTouchBarState:(BOOL)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		native_to_managed_trampoline_7 (self, _cmd, &managed_method, p0, 0x212);
+	}
+
+	-(BOOL) conformsToProtocol:(void *)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, p0, 0x48E0E);
+	}
+
+	-(id) init
+	{
+		static MonoMethod *managed_method = NULL;
+		bool call_super = false;
+		id rv = native_to_managed_trampoline_4 (self, _cmd, &managed_method, &call_super, 0x312);
+		if (call_super && rv) {
+			struct objc_super super = {  rv, [NSObject class] };
+			rv = ((id (*)(objc_super*, SEL)) objc_msgSendSuper) (&super, @selector (init));
+		}
+		return rv;
+	}
+@end
+
 @implementation InsultViewController {
 	XamarinObject __monoObjectGCHandle;
 }
@@ -782,67 +888,67 @@ exception_handling:;
 	-(NSButton *) GenerateAnInsultButton
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_7 (self, _cmd, &managed_method, 0x512);
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0x812);
 	}
 
 	-(void) setGenerateAnInsultButton:(NSButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x612);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x912);
 	}
 
 	-(NSTextField *) InsultLabel
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_7 (self, _cmd, &managed_method, 0x712);
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0xA12);
 	}
 
 	-(void) setInsultLabel:(NSTextField *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x812);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0xB12);
 	}
 
 	-(NSTextField *) InsultsTouchBarLabel
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_7 (self, _cmd, &managed_method, 0x912);
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0xC12);
 	}
 
 	-(void) setInsultsTouchBarLabel:(NSTextField *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0xA12);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0xD12);
 	}
 
 	-(NSButton *) PreviouslyGeneratedInsultsButton
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_7 (self, _cmd, &managed_method, 0xB12);
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0xE12);
 	}
 
 	-(void) setPreviouslyGeneratedInsultsButton:(NSButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0xC12);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0xF12);
 	}
 
 	-(void) viewDidLoad
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_5 (self, _cmd, &managed_method, 0x212);
+		native_to_managed_trampoline_5 (self, _cmd, &managed_method, 0x512);
 	}
 
 	-(void) GenerateAnInsultButtonPressed:(NSButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0xD12);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x1012);
 	}
 
 	-(void) PreviouslyGeneratedInsultsButtonPressed:(NSButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0xE12);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x1112);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -896,13 +1002,13 @@ exception_handling:;
 	-(void) applicationDidFinishLaunching:(NSNotification *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x1212);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x1512);
 	}
 
 	-(void) applicationWillTerminate:(NSNotification *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x1312);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x1612);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -915,7 +1021,7 @@ exception_handling:;
 	{
 		static MonoMethod *managed_method = NULL;
 		bool call_super = false;
-		id rv = native_to_managed_trampoline_4 (self, _cmd, &managed_method, &call_super, 0x1112);
+		id rv = native_to_managed_trampoline_4 (self, _cmd, &managed_method, &call_super, 0x1412);
 		if (call_super && rv) {
 			struct objc_super super = {  rv, [NSObject class] };
 			rv = ((id (*)(objc_super*, SEL)) objc_msgSendSuper) (&super, @selector (init));
@@ -968,37 +1074,37 @@ exception_handling:;
 	-(NSComboBox *) AppearanceComboBox
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_7 (self, _cmd, &managed_method, 0x1512);
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0x1812);
 	}
 
 	-(void) setAppearanceComboBox:(NSComboBox *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x1612);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x1912);
 	}
 
 	-(NSSwitch *) TouchBarEnableSwitch
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_7 (self, _cmd, &managed_method, 0x1712);
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0x1A12);
 	}
 
 	-(void) setTouchBarEnableSwitch:(NSSwitch *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x1812);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x1B12);
 	}
 
 	-(void) AppearanceComboBoxChanged:(NSComboBox *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x1912);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x1C12);
 	}
 
 	-(void) TouchBarSwitchStateChanged:(NSSwitch *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x1A12);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x1D12);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -1052,19 +1158,19 @@ exception_handling:;
 	-(NSButton *) InsultGeneratorButton
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_7 (self, _cmd, &managed_method, 0x2E12);
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0x3112);
 	}
 
 	-(void) setInsultGeneratorButton:(NSButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2F12);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x3212);
 	}
 
 	-(void) GenerateInsultButtonPressed:(NSButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x3012);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x3312);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -1118,73 +1224,73 @@ exception_handling:;
 	-(NSButton *) ClearInsultsButton
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_7 (self, _cmd, &managed_method, 0x2212);
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0x2512);
 	}
 
 	-(void) setClearInsultsButton:(NSButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2312);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2612);
 	}
 
 	-(NSTextView *) InsultsTextView
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_7 (self, _cmd, &managed_method, 0x2412);
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0x2712);
 	}
 
 	-(void) setInsultsTextView:(NSTextView *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2512);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2812);
 	}
 
 	-(NSButton *) SaveInsultsButton
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_7 (self, _cmd, &managed_method, 0x2612);
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0x2912);
 	}
 
 	-(void) setSaveInsultsButton:(NSButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2712);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2A12);
 	}
 
 	-(NSTextField *) SaveResultTextField
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_7 (self, _cmd, &managed_method, 0x2812);
+		return native_to_managed_trampoline_8 (self, _cmd, &managed_method, 0x2B12);
 	}
 
 	-(void) setSaveResultTextField:(NSTextField *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2912);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2C12);
 	}
 
 	-(void) saveDocumentAs:(NSObject *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2012);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2312);
 	}
 
 	-(void) viewDidLoad
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_5 (self, _cmd, &managed_method, 0x2112);
+		native_to_managed_trampoline_5 (self, _cmd, &managed_method, 0x2412);
 	}
 
 	-(void) ClearInsultsButtonClicked:(NSButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2A12);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2D12);
 	}
 
 	-(void) SaveInsultsButtonClicked:(NSButton *)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2B12);
+		native_to_managed_trampoline_1 (self, _cmd, &managed_method, p0, 0x2E12);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -1244,11 +1350,12 @@ exception_handling:;
 		{ NULL, 0x8C0E /* #46 '__NSRotationGestureRecognizer' => 'AppKit.NSRotationGestureRecognizer+Callback, Xamarin.Mac' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
 		{ NULL, 0x8B0E /* #47 'NSRotationGestureRecognizer' => 'AppKit.NSRotationGestureRecognizer, Xamarin.Mac' */, (MTTypeFlags) (0) /* None */ },
 		{ NULL, 0xBD0E /* #48 '__NSObject_Disposer' => 'Foundation.NSObject+NSObject_Disposer, Xamarin.Mac' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0x212 /* #49 'InsultViewController' => 'InsultGenerator.InsultViewController, InsultGenerator' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0x412 /* #50 'AppDelegate' => 'InsultGenerator.AppDelegate, InsultGenerator' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0x512 /* #51 'PreferencesViewController' => 'InsultGenerator.PreferencesViewController, InsultGenerator' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0x712 /* #52 'ViewController' => 'InsultGenerator.ViewController, InsultGenerator' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
-		{ NULL, 0x612 /* #53 'PreviousInsultsController' => 'InsultGenerator.PreviousInsultsController, InsultGenerator' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0x212 /* #49 'AppPreferences' => 'InsultGenerator.AppPreferences, InsultGenerator' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0x312 /* #50 'InsultViewController' => 'InsultGenerator.InsultViewController, InsultGenerator' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0x512 /* #51 'AppDelegate' => 'InsultGenerator.AppDelegate, InsultGenerator' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0x612 /* #52 'PreferencesViewController' => 'InsultGenerator.PreferencesViewController, InsultGenerator' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0x812 /* #53 'ViewController' => 'InsultGenerator.ViewController, InsultGenerator' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
+		{ NULL, 0x712 /* #54 'PreviousInsultsController' => 'InsultGenerator.PreviousInsultsController, InsultGenerator' */, (MTTypeFlags) (3) /* CustomType, UserType */ },
 		{ NULL, 0 },
 	};
 
@@ -1277,7 +1384,7 @@ exception_handling:;
 		NULL,
 		{ NULL, NULL },
 		10,
-		54,
+		55,
 		0,
 		1,
 		0,
@@ -1334,11 +1441,12 @@ void xamarin_create_classes () {
 	__xamarin_class_map [46].handle = objc_getClass ("__NSRotationGestureRecognizer");
 	__xamarin_class_map [47].handle = objc_getClass ("NSRotationGestureRecognizer");
 	__xamarin_class_map [48].handle = objc_getClass ("__NSObject_Disposer");
-	__xamarin_class_map [49].handle = [InsultViewController class];
-	__xamarin_class_map [50].handle = [AppDelegate class];
-	__xamarin_class_map [51].handle = [PreferencesViewController class];
-	__xamarin_class_map [52].handle = [ViewController class];
-	__xamarin_class_map [53].handle = [PreviousInsultsController class];
+	__xamarin_class_map [49].handle = [AppPreferences class];
+	__xamarin_class_map [50].handle = [InsultViewController class];
+	__xamarin_class_map [51].handle = [AppDelegate class];
+	__xamarin_class_map [52].handle = [PreferencesViewController class];
+	__xamarin_class_map [53].handle = [ViewController class];
+	__xamarin_class_map [54].handle = [PreviousInsultsController class];
 	xamarin_add_registration_map (&__xamarin_registration_map, false);
 }
 

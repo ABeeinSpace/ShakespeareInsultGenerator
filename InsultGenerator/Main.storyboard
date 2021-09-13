@@ -502,11 +502,11 @@ Gw
                     </view>
                     <touchBar key="touchBar" id="gV7-Bk-g1Y">
                         <touchBarItems>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="Jqa-Xk-Ugg"/>
                             <touchBarItem id="Msx-Lk-RlB">
                                 <viewController key="viewController" id="LZO-7h-sYm">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o1V-dj-BvG">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="juB-m2-iNk">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" usesAppearanceFont="YES"/>
@@ -521,7 +521,6 @@ Gw
                                 <viewController key="viewController" id="W6Y-XB-om3">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9mv-0x-Gow">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DS7-A8-cWg">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" usesAppearanceFont="YES"/>
@@ -532,6 +531,7 @@ Gw
                                     </button>
                                 </viewController>
                             </touchBarItem>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="3L3-aX-F0E"/>
                         </touchBarItems>
                     </touchBar>
                     <connections>
@@ -610,7 +610,6 @@ DQ
                                 <viewController key="viewController" id="2DY-Ei-lNJ">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IgU-TD-tqe">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="View Previous Insults" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ezm-n1-yHR">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" usesAppearanceFont="YES"/>
@@ -625,7 +624,6 @@ DQ
                                 <viewController key="viewController" id="eaZ-mG-hlG">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yGJ-Dv-nqF">
                                         <rect key="frame" x="0.0" y="0.0" width="126" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="Generate Insult" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HNc-5E-hP1">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" usesAppearanceFont="YES"/>
@@ -640,7 +638,6 @@ DQ
                                 <viewController key="viewController" id="XVe-ji-XHZ">
                                     <textField key="view" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xss-2R-N3j">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="18"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="gqL-bC-C5L">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -716,11 +713,11 @@ DQ
                     </view>
                     <touchBar key="touchBar" id="jcm-Nc-8Zp">
                         <touchBarItems>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="qUj-OR-wfH"/>
                             <touchBarItem id="m3V-gP-Z2O">
                                 <viewController key="viewController" id="GXe-ID-cBs">
                                     <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9V3-Tb-cDy">
                                         <rect key="frame" x="0.0" y="0.0" width="144" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="Generate an Insult" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ptw-gG-nSg">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -734,6 +731,7 @@ DQ
                                     </button>
                                 </viewController>
                             </touchBarItem>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="mb7-Kc-eq7"/>
                         </touchBarItems>
                     </touchBar>
                     <connections>
