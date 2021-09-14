@@ -1,12 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "6gyYcwcXjXqwT8hqnaq58RHKOmd1y9Z5TxvfCVZlvr8Cja+RXE5ynKVlIZDEbFi2m272jV9Ynfys5y/WNZmSQw==",
+  "dgSpecHash": "pD95np3dwBqzuOxKXYD+zlvOc82fdqPYnmPyLXzP4YuS8Bymlfy60Ceyl/7PIbBj8vxnGptsY0L4ETJZYr1a4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aidan Border\\Documents\\ShakespeareInsultGenerator\\InsultGenerator-Win\\InsultGenerator-Win.csproj",
+  "projectFilePath": "C:\\Users\\Aidan Border\\Developer\\ShakespeareInsultGenerator\\InsultGenerator-Win\\InsultGenerator-Win.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Aidan Border\\.nuget\\packages\\autoupdater.net.official\\1.6.4\\autoupdater.net.official.1.6.4.nupkg.sha512"
+    "C:\\Users\\Aidan Border\\.nuget\\packages\\autoupdater.net.official\\1.6.4\\autoupdater.net.official.1.6.4.nupkg.sha512",
+    "C:\\Users\\Aidan Border\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Aidan Border\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Aidan Border\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Aidan Border\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.15\\microsoft.netcore.app.host.win-x64.3.1.15.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Aidan Border\\Developer\\ShakespeareInsultGenerator\\InsultGenerator-Win\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1701",
       "level": "Warning",
